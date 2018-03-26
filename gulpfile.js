@@ -1,6 +1,7 @@
 const gulp = require('gulp');
 const del = require('del');
 const gulpif = require('gulp-if');
+const watch = require('gulp-watch');
 const lazypipe = require('lazypipe');
 const plumber = require('gulp-plumber');
 const runSequence = require('run-sequence');
@@ -27,6 +28,7 @@ const paths = {
   styles: {
     inputSingle: 'src/scss/styles.{scss,sass}',
     inputAll: 'src/scss/**/*.{scss,sass}',
+    vendor: 'src/scss/vendor/**/*',
     output: 'dist/css/',
   },
   images: {
@@ -37,10 +39,14 @@ const paths = {
     input: 'src/*.html',
     output: 'dist/',
   },
+  fonts: {
+    input: 'src/fonts/**/*',
+    output: 'dist/css',
+  },
 };
 
 gulp.task('default', () => {
-  runSequence('clean', ['scripts', 'styles', 'images', 'html']);
+  runSequence('clean', ['scripts', 'styles', 'images', 'fonts', 'html']);
 });
 
 gulp.task('production', () => {
@@ -48,10 +54,11 @@ gulp.task('production', () => {
 });
 
 gulp.task('serve', () => {
-  runSequence('browser-sync', 'default');
-  gulp.watch(paths.styles.inputAll, ['styles']);
-  gulp.watch(paths.scripts.input, ['scripts']);
-  gulp.watch(paths.html.input, ['html']);
+  runSequence('default', 'browser-sync');
+  watch(paths.styles.inputAll, () => runSequence('styles'));
+  watch(paths.images.input, () => runSequence('images'));
+  watch(paths.scripts.input, () => runSequence('scripts'));
+  watch(paths.html.input, () => runSequence('html'));
 });
 
 gulp.task('clean', () => del(paths.output));
@@ -89,6 +96,7 @@ gulp.task('images', () =>
     .pipe(plumber())
     .pipe(imagemin())
     .pipe(gulp.dest(paths.images.output))
+    .pipe(gulpif(!isProd, browserSync.stream()))
 );
 
 gulp.task('html', () =>
@@ -97,6 +105,13 @@ gulp.task('html', () =>
     .pipe(plumber())
     .pipe(gulp.dest(paths.html.output))
     .pipe(gulpif(!isProd, browserSync.stream()))
+);
+
+gulp.task('fonts', () =>
+  gulp
+    .src(paths.fonts.input)
+    .pipe(plumber())
+    .pipe(gulp.dest(paths.fonts.output))
 );
 
 gulp.task('browser-sync', () => {
@@ -109,7 +124,7 @@ gulp.task('browser-sync', () => {
 
 gulp.task('lint-sass', () =>
   gulp
-    .src(paths.styles.inputAll) // TODO: ignore vendor
+    .src([paths.styles.inputAll, !paths.styles.vendor])
     .pipe(plumber())
     .pipe(sassLint())
     .pipe(sassLint.format())

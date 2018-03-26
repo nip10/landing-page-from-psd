@@ -1,0 +1,53 @@
+.contact {
+  background: $gray-100;
+  margin-top: 100px;
+  padding-bottom: 100px;
+  padding-top: 100px;
+  &--info {
+    &__header {
+      margin-bottom: 50px;
+      h2 {
+        color: $purple-800;
+        font-size: 48px;
+        font-weight: 300;
+        margin: 0;
+        @include media-breakpoint-down(md) {
+          font-size: 32px;
+        }
+      }
+      div.line {
+        background-color: $pink;
+        height: 2px;
+        margin-top: 15px;
+        width: 80px;
+      }
+    }
+    &__body {
+      margin-bottom: 50px;
+      p {
+        color: $gray-600;
+      }
+    }
+    &__footer {
+      span {
+        color: $purple-800;
+        display: block;
+        p {
+          color: $gray-600;
+          display: inline-block;
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+  &--form {
+    input {
+      margin-bottom: 20px;
+      margin-top: 20px;
+      max-width: 100%;
+    }
+    textarea {
+      max-width: 100%;
+    }
+  }
+}

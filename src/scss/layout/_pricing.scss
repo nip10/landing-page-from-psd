@@ -1,0 +1,46 @@
+.pricing {
+  background-color: $gray-100;
+  margin-top: 100px;
+  padding-bottom: 100px;
+  .section--heading {
+    margin-top: 50px;
+  }
+  .card {
+    margin-top: 25px;
+    padding: 20px;
+    &--header {
+      margin-bottom: 25px;
+      h5 {
+        color: $purple-800;
+        font-size: 18px;
+      }
+      .planprice {
+        color: $pink;
+        span {
+          font-size: 18px;
+        }
+        p {
+          font-size: 48px;
+          line-height: 1;
+          margin-bottom: 0;
+          position: relative;
+          z-index: 1;
+        }
+      }
+    }
+    &--body {
+      p {
+        border-bottom: 1px solid $gray-200;
+        line-height: 1;
+        margin-bottom: 0;
+        padding: 15px 0;
+        &:first-child {
+          border-top: 1px solid $gray-200;
+        }
+      }
+    }
+    &--footer {
+      margin-top: 20px;
+    }
+  }
+}

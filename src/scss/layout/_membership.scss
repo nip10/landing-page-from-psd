@@ -1,0 +1,23 @@
+.membership {
+    background: $purple-400;
+    background: linear-gradient(to left, $purple-600, $purple-400);
+    margin-top: 100px;
+    padding-bottom: 50px;
+    padding-top: 50px;
+    &--description {
+      h2 {
+        color: $white;
+        font-size: 36px;
+        @include media-breakpoint-down(md) {
+          font-size: 32px;
+        }
+      }
+      p {
+        color: $white;
+        margin-bottom: 0;
+      }
+    }
+    &--button {
+      text-align: right;
+    }
+}

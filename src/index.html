@@ -8,39 +8,814 @@
   <!-- Render Chrome if available or using latest version of Internet Explorer (Recommended). -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
   <!-- Document Title -->
-  <title>Page Title</title>
+  <title>Colorlib App</title>
   <!-- Search Engine and Browser Meta Tags. -->
-  <meta name="description" content="TODO... Landing page for X product">
-  <!-- Manifest PWA -->
-  <link rel="manifest" href="/manifest.json">
+  <meta name="description" content="Colorlib app">
   <!-- Icons -->
-  <link rel="apple-touch-icon" sizes="120x120" href="images/icons/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="images/icons/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="images/icons/favicon-16x16.png">
-  <link rel="mask-icon" href="images/icons/safari-pinned-tab.svg" color="#4e5d74">
-  <meta name="msapplication-TileColor" content="#4e5d74">
-  <meta name="theme-color" content="#4e5d74">
+  <link rel="shortcut icon" href="img/icons/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" sizes="120x120" href="img/icons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/icons/favicon-16x16.png">
+  <link rel="mask-icon" href="img/icons/safari-pinned-tab.svg" color="#4e5d74">
   <!-- Stylesheets -->
+  <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" integrity="sha256-j+P6EZJVrbXgwSR5Mx+eCS6FvP9Wq27MBRC/ogVriY0="
+    crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.min.css" integrity="sha256-AWqwvQ3kg5aA5KcXpX25sYKowsX97sTCTbeo33Yfyk0="
+    crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" integrity="sha256-UK1EiopXIL+KVhfbFa8xrmAWPeBjMVdvYMYkTAEv/HI="
+    crossorigin="anonymous" />
   <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
-  <p class="hello"> Hello World!
-    <span> Foooo </span>
-  </p>
-  <img src="images/duck.jpg">
+  <!-- Header (Nav) -->
+  <header>
+    <div class="container-fuild">
+      <div class="row align-items-center">
+        <div class="col-12 col-lg-10">
+          <nav class="navbar navbar-expand-lg navbar-light">
+            <!-- Logo -->
+            <a class="navbar-brand" href="#">Ca.</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ca-navbar" aria-controls="ca-navbar" aria-expanded="false"
+              aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Menu Area -->
+            <div class="collapse navbar-collapse" id="ca-navbar">
+              <ul class="navbar-nav ml-auto" id="nav">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#home">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#about">About</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#features">Features</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#screenshot">Screenshot</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#pricing">Pricing</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#testimonials">Testimonials</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#team">Team</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#contact">Contact</a>
+                </li>
+              </ul>
+              <div class="d-lg-none">
+                <a href="#" class="button button--secondary" id="mobilebtn">Sign Up Free</a>
+              </div>
+            </div>
+          </nav>
+        </div>
+        <div class="col-12 col-lg-2">
+          <div class="text-right d-none d-lg-block">
+            <a href="#" class="button button--secondary">Sign Up Free</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- Welcome (Home) -->
+  <section class="welcome" id="home">
+    <div class="container h-100">
+      <div class="col-12">
+        <div class="welcome--header">
+          <h1>Colorlib app</h1>
+          <h2>C</h2>
+          <p>Everything You Need. To Start Selling Online Beautifully</p>
+        </div>
+        <form action="#" class="form-inline" method="POST">
+          <input type="email" class="form-control input" placeholder="email@company.com">
+          <input type="submit" class="button button--primary" value="Get Started">
+        </form>
+      </div>
+    </div>
+    </div>
+    <div class="welcome--thumb wow fadeInDown" data-wow-delay="0.5s">
+      <img src="img/welcome-img.png" alt="CA app in phone screen">
+    </div>
+  </section>
+  <!-- About -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="section--heading">
+            <h2>Why Is It Special</h2>
+            <div class="line"></div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 col-md-4">
+          <div class="card wow fadeInUp" data-wow-delay="0.2s">
+            <div class="card--icon">
+              <i class="ion-iphone" aria-hidden="true"></i>
+            </div>
+            <h4 class="card--title">Easy to use</h4>
+            <p class="card--description">We build pretty complex tools and this allows us to take designs and turn them into functional quickly and easily</p>
+          </div>
+        </div>
+        <div class="col-12 col-md-4">
+          <div class="card wow fadeInUp" data-wow-delay="0.2s">
+            <div class="card--icon">
+              <i class="ion-edit" aria-hidden="true"></i>
+            </div>
+            <h4 class="card--title">Powerful design</h4>
+            <p class="card--description">We build pretty complex tools and this allows us to take designs and turn them into functional quickly and easily</p>
+          </div>
+        </div>
+        <div class="col-12 col-md-4">
+          <div class="card wow fadeInUp" data-wow-delay="0.2s">
+            <div class="card--icon">
+              <i class="ion-ios-gear-outline" aria-hidden="true"></i>
+            </div>
+            <h4 class="card--title">Customizability</h4>
+            <p class="card--description">We build pretty complex tools and this allows us to take designs and turn them into functional quickly and easily</p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="about--image">
+            <img src="img/special.png" alt="Phone showing app features">
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="about--description">
+            <h2 class="about--title">Our Best Propositions for You!</h2>
+            <p class="about--text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor ut labore et dolore magna aliqua.
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor ut labore et dolore magna aliqua.
+              Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+            <div class="about--download">
+              <div class="about--download--button d-inline-block wow fadeInUp" data-wow-delay="0.2s">
+                <a href="#" class="button button--secondary">
+                  <i class="ion-social-android" aria-hidden="true"></i>
+                  <p class="d-inline-block">
+                    <span class="d-block">available on</span>Google Store</p>
+                  </p>
+                </a>
+              </div>
+              <div class="about--download--button d-inline-block wow fadeInUp" data-wow-delay="0.2s">
+                <a href="#" class="button button--secondary">
+                  <i class="ion-social-apple" aria-hidden="true"></i>
+                  <p class="d-inline-block">
+                    <span class="d-block">available on</span>Apple Store</p>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Features -->
+  <section class="features" id="features">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="section--heading">
+            <h2>Awesome Features</h2>
+            <div class="line"></div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 col-sm-6 col-lg-4">
+          <div class="card">
+            <div class="card--header">
+              <div class="card--icon">
+                <i class="ion-person" aria-hidden="true"></i>
+              </div>
+              <h5 class="card--title">Awesome Experience</h5>
+            </div>
+            <p class="card--description">Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-4">
+          <div class="card">
+            <div class="card--header">
+              <div class="card--icon">
+                <i class="ion-ios-pulse-strong" aria-hidden="true"></i>
+              </div>
+              <h5 class="card--title">Fast and Simple</h5>
+            </div>
+            <p class="card--description">Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-4">
+          <div class="card">
+            <div class="card--header">
+              <div class="card--icon">
+                <i class="ion-speedometer" aria-hidden="true"></i>
+              </div>
+              <h5 class="card--title">Clean Code</h5>
+            </div>
+            <p class="card--description">Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-4">
+          <div class="card">
+            <div class="card--header">
+              <div class="card--icon">
+                <i class="ion-android-color-palette" aria-hidden="true"></i>
+              </div>
+              <h5 class="card--title">Perfect Design</h5>
+            </div>
+            <p class="card--description">Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-4">
+          <div class="card">
+            <div class="card--header">
+              <div class="card--icon">
+                <i class="ion-flash" aria-hidden="true"></i>
+              </div>
+              <h5 class="card--title">Best Industry Leader</h5>
+            </div>
+            <p class="card--description">Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-4">
+          <div class="card">
+            <div class="card--header">
+              <div class="card--icon">
+                <i class="ion-headphone" aria-hidden="true"></i>
+              </div>
+              <h5 class="card--title">24/7 Online Support</h5>
+            </div>
+            <p class="card--description">Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Video -->
+  <section class="video">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="video--container">
+            <iframe src="https://www.youtube-nocookie.com/embed/f5BBJ4ySgpo?rel=0&amp;showinfo=0" frameborder="0" allow="encrypted-media"
+              allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Stats -->
+  <section class="stats" id="stats">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-3">
+          <div class="stats--single d-flex justify-content-center wow fadeInUp">
+            <div class="stats--counter">
+              <p id="c1"></p>
+            </div>
+            <div class="stats--description">
+              <i class="ion-arrow-down-a"></i>
+              <p>APP
+                <br> DOWNLOADS</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-3">
+          <div class="stats--single d-flex justify-content-center wow fadeInUp">
+            <div class="stats--counter">
+              <p id="c2"></p>
+            </div>
+            <div class="stats--description">
+              <i class="ion-checkmark"></i>
+              <p>HAPPY
+                <br> CLIENTS</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-3">
+          <div class="stats--single d-flex justify-content-center wow fadeInUp">
+            <div class="stats--counter">
+              <p id="c3"></p>
+            </div>
+            <div class="stats--description">
+              <i class="ion-person"></i>
+              <p>ACTiVE
+                <br> ACCOUNTS</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-3">
+          <div class="stats--single d-flex justify-content-center wow fadeInUp">
+            <div class="stats--counter">
+              <p id="c4"></p>
+            </div>
+            <div class="stats--description">
+              <i class="ion-star"></i>
+              <p>TOTAL
+                <br> APP RATES</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Screenshots -->
+  <section class="screenshots" id="screenshots">
+    <div class="container-fuild">
+      <div class="row">
+        <div class="col-12">
+          <div class="section--heading">
+            <h2>App Screenshots</h2>
+            <div class="line"></div>
+          </div>
+          <div class="owl-carousel screenshots--slides">
+            <div class="screenshots--slides--single">
+              <img src="img/app-1.jpg" alt="App screenshot 1">
+            </div>
+            <div class="screenshots--slides--single">
+              <img src="img/app-2.jpg" alt="App screenshot 2">
+            </div>
+            <div class="screenshots--slides--single">
+              <img src="img/app-3.jpg" alt="App screenshot 3">
+            </div>
+            <div class="screenshots--slides--single">
+              <img src="img/app-4.jpg" alt="App screenshot 4">
+            </div>
+            <div class="screenshots--slides--single">
+              <img src="img/app-5.jpg" alt="App screenshot 5">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Pricing table -->
+  <section class="pricing" id="pricing">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="section--heading">
+            <h2>Pricing Plan</h2>
+            <div class="line"></div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="card">
+            <div class="card--header">
+              <h5>Starter Plan</h5>
+              <div class="planprice d-flex justify-content-center">
+                <span>$</span>
+                <p>29</p>
+              </div>
+            </div>
+            <div class="card--body">
+              <p>Up to 10 users monthly</p>
+              <p>Unlimited updates</p>
+              <p>Free host & domain</p>
+              <p>24/7 Support</p>
+              <p>10 Unique Users</p>
+            </div>
+            <div class="card--footer">
+              <a href="#" class="button button--primary">Select Plan</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="card">
+            <div class="card--header">
+              <h5>Basic Plan</h5>
+              <div class="planprice d-flex justify-content-center">
+                <span>$</span>
+                <p>49</p>
+              </div>
+            </div>
+            <div class="card--body">
+              <p>Up to 10 users monthly</p>
+              <p>Unlimited updates</p>
+              <p>Free host & domain</p>
+              <p>24/7 Support</p>
+              <p>10 Unique Users</p>
+            </div>
+            <div class="card--footer">
+              <a href="#" class="button button--primary">Select Plan</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="card highlight">
+            <div class="card--header">
+              <h5>Advenced Plan</h5>
+              <div class="planprice d-flex justify-content-center">
+                <span>$</span>
+                <p>69</p>
+              </div>
+            </div>
+            <div class="card--body">
+              <p>Up to 10 users monthly</p>
+              <p>Unlimited updates</p>
+              <p>Free host & domain</p>
+              <p>24/7 Support</p>
+              <p>10 Unique Users</p>
+            </div>
+            <div class="card--footer">
+              <a href="#" class="button button--primary">Select Plan</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="card">
+            <div class="card--header">
+              <h5>Community Plan</h5>
+              <div class="planprice d-flex justify-content-center">
+                <span>$</span>
+                <p>99</p>
+              </div>
+            </div>
+            <div class="card--body">
+              <p>Up to 10 users monthly</p>
+              <p>Unlimited updates</p>
+              <p>Free host & domain</p>
+              <p>24/7 Support</p>
+              <p>10 Unique Users</p>
+            </div>
+            <div class="card--footer">
+              <a href="#" class="button button--primary">Select Plan</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Client feedback -->
+  <section class="feedback" id="feedback">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-10">
+          <div class="slider slider-for">
+            <div class="feedback--text text-center">
+              <div class="feedback--client">
+                <i class="ion-quote" aria-hidden="true"></i>
+              </div>
+              <div class="feedback--client--description text-center">
+                <p>“ I have been using it for a number of years. I use Colorlib for usability testing. It's great for taking
+                  images and making clickable image prototypes that do the job and save me the coding time and just the general
+                  hassle of hosting. ”</p>
+              </div>
+              <div class="star-icon text-center">
+                <i class="ion-ios-star"></i>
+                <i class="ion-ios-star"></i>
+                <i class="ion-ios-star"></i>
+                <i class="ion-ios-star"></i>
+                <i class="ion-ios-star"></i>
+              </div>
+              <div class="feedback--client--name text-center">
+                <h5>Aigars Silkalns</h5>
+                <p>Ceo Colorlib</p>
+              </div>
+            </div>
+            <div class="feedback--text text-center">
+              <div class="feedback--client">
+                <i class="ion-quote" aria-hidden="true"></i>
+              </div>
+              <div class="feedback--client--description text-center">
+                <p>“ I use Colorlib for usability testing. It's great for taking images and making clickable image prototypes
+                  that do the job and save me the coding time and just the general hassle of hosting. ”</p>
+              </div>
+              <div class="star-icon text-center">
+                <i class="ion-ios-star"></i>
+                <i class="ion-ios-star"></i>
+                <i class="ion-ios-star"></i>
+                <i class="ion-ios-star"></i>
+                <i class="ion-ios-star"></i>
+              </div>
+              <div class="feedback--client--name text-center">
+                <h5>Jennifer</h5>
+                <p>Developer</p>
+              </div>
+            </div>
+            <div class="feedback--text text-center">
+              <div class="feedback--client">
+                <i class="ion-quote" aria-hidden="true"></i>
+              </div>
+              <div class="feedback--client--description text-center">
+                <p>“ I have been using it for a number of years. I use Colorlib for usability testing. It's great for taking
+                  images and making clickable image prototypes that do the job.”</p>
+              </div>
+              <div class="star-icon text-center">
+                <i class="ion-ios-star"></i>
+                <i class="ion-ios-star"></i>
+                <i class="ion-ios-star"></i>
+                <i class="ion-ios-star"></i>
+                <i class="ion-ios-star"></i>
+              </div>
+              <div class="feedback--client--name text-center">
+                <h5>Helen</h5>
+                <p>Marketer</p>
+              </div>
+            </div>
+            <div class="feedback--text text-center">
+              <div class="feedback--client">
+                <i class="ion-quote" aria-hidden="true"></i>
+              </div>
+              <div class="feedback--client--description text-center">
+                <p>“ I have been using it for a number of years. I use Colorlib for usability testing. It's great for taking
+                  images and making clickable image prototypes that do the job and save me the coding time and just the general
+                  hassle of hosting. ”</p>
+              </div>
+              <div class="star-icon text-center">
+                <i class="ion-ios-star"></i>
+                <i class="ion-ios-star"></i>
+                <i class="ion-ios-star"></i>
+                <i class="ion-ios-star"></i>
+                <i class="ion-ios-star"></i>
+              </div>
+              <div class="feedback--client--name text-center">
+                <h5>Henry smith</h5>
+                <p>Developer</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-5">
+          <div class="slider slider-nav">
+            <div class="feedback--client--thumbnail">
+              <img src="img/client-3.jpg" alt="Client 1">
+            </div>
+            <div class="feedback--client--thumbnail">
+              <img src="img/client-2.jpg" alt="Client 2">
+            </div>
+            <div class="feedback--client--thumbnail">
+              <img src="img/client-1.jpg" alt="Client 3">
+            </div>
+            <div class="feedback--client--thumbnail">
+              <img src="img/client-2.jpg" alt="Client 4">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Membership -->
+  <section class="membership" id="membership">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-12 col-md-10">
+          <div class="membership--description">
+            <h2>Join our monthly Membership</h2>
+            <p>Find the perfect plan for you — 100% satisfaction guaranteed.</p>
+          </div>
+        </div>
+        <div class="col-12 col-md-2">
+          <div class="membership--button wow bounceInDown" data-wow-delay="0.5s">
+            <a href="#" class="button button--primary">Get Started</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Team -->
+  <section class="team" id="team">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="section--heading">
+            <h2>Our Team</h2>
+            <div class="line"></div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="team--member__container">
+            <div class="team--member__image">
+              <img src="img/team-1.jpg" alt="team member 1">
+              <div class="team--member__overlay">
+                <div class="team--member__social">
+                  <a href="#">
+                    <i class="ion-social-facebook-outline"></i>
+                  </a>
+                  <a href="#">
+                    <i class="ion-social-twitter-outline"></i>
+                  </a>
+                  <a href="#">
+                    <i class="ion-social-youtube-outline"></i>
+                  </a>
+                  <a href="#">
+                    <i class="ion-social-instagram-outline"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="team--member__description">
+              <h4>Jackson Nash</h4>
+              <p>Tax Advice</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="team--member__container">
+            <div class="team--member__image">
+              <img src="img/team-2.jpg" alt="team member 2">
+              <div class="team--member__overlay">
+                <div class="team--member__social">
+                  <a href="#">
+                    <i class="ion-social-facebook-outline"></i>
+                  </a>
+                  <a href="#">
+                    <i class="ion-social-twitter-outline"></i>
+                  </a>
+                  <a href="#">
+                    <i class="ion-social-youtube-outline"></i>
+                  </a>
+                  <a href="#">
+                    <i class="ion-social-instagram-outline"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="team--member__description">
+              <h4>Alex Manning</h4>
+              <p>CEO</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="team--member__container">
+            <div class="team--member__image">
+              <img src="img/team-3.jpg" alt="team member 3">
+              <div class="team--member__overlay">
+                <div class="team--member__social">
+                  <a href="#">
+                    <i class="ion-social-facebook-outline"></i>
+                  </a>
+                  <a href="#">
+                    <i class="ion-social-twitter-outline"></i>
+                  </a>
+                  <a href="#">
+                    <i class="ion-social-youtube-outline"></i>
+                  </a>
+                  <a href="#">
+                    <i class="ion-social-instagram-outline"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="team--member__description">
+              <h4>Ollie Schneider</h4>
+              <p>Business Planner</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="team--member__container">
+            <div class="team--member__image">
+              <img src="img/team-4.jpg" alt="team member 4">
+              <div class="team--member__overlay">
+                <div class="team--member__social">
+                  <a href="#">
+                    <i class="ion-social-facebook-outline"></i>
+                  </a>
+                  <a href="#">
+                    <i class="ion-social-twitter-outline"></i>
+                  </a>
+                  <a href="#">
+                    <i class="ion-social-youtube-outline"></i>
+                  </a>
+                  <a href="#">
+                    <i class="ion-social-instagram-outline"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="team--member__description">
+              <h4>Roger West</h4>
+              <p>Finances</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Contact -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-6">
+          <div class="contact--info__header">
+            <h2>Get in touch with us</h2>
+            <div class="line"></div>
+          </div>
+          <div class="contact--info__body">
+            <p>We'll send you epic weekly blogs, whitepapers and things to make your app startup thrive, all FREE!</p>
+          </div>
+          <div class="contact--info__footer">
+            <span>Address:
+              <p>40 Baria Sreet 133/2 NewYork City, US</p>
+            </span>
+            <span>Phone:
+              <p>+11-225-888-888-66</p>
+            </span>
+            <span>Email:
+              <p>info.deercreative@gmail.com</p>
+            </span>
+          </div>
+        </div>
+        <div class="col-12 col-md-6">
+          <form action="#" method="POST" class="contact--form">
+            <input type="text" class="form-control input" placeholder="Your Name" required>
+            <input type="email" class="form-control input" placeholder="Your E-mail" required>
+            <textarea class="form-control input" placeholder="Your Message" required>
+            </textarea>
+            <input type="submit" class="button button--primary" value="Send">
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="footer--logo">
+            <h2>Ca.</h2>
+          </div>
+          <div class="footer--social">
+            <a href="#">
+              <i class="ion-social-facebook-outline"></i>
+            </a>
+            <a href="#">
+              <i class="ion-social-twitter-outline"></i>
+            </a>
+            <a href="#">
+              <i class="ion-social-youtube-outline"></i>
+            </a>
+            <a href="#">
+              <i class="ion-social-instagram-outline"></i>
+            </a>
+          </div>
+          <div class="footer--menu">
+            <nav>
+              <ul>
+                <li>
+                  <a href="#">About</a>
+                </li>
+                <li>
+                  <a href="#">Terms &#38; Conditions</a>
+                </li>
+                <li>
+                  <a href="#">Privacy Policy</a>
+                </li>
+                <li>
+                  <a href="#">Contact</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="footer--copyright">
+            <p>Copyright &#169; 2017 Ca. Designed by
+              <a href="https://colorlib.com" target="_blank">Colorlib</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
   <!-- JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js" integrity="sha256-z6FznuNG1jo9PP3/jBjL6P3tvLMtSwiVAowZPOgo56U="
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js" integrity="sha256-jDnOKIOq2KNsQZTcBTEnsp76FnfMEttF6AV2DF2fFNE="
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/countup.js/1.9.3/countUp.min.js" integrity="sha256-/szELCgTjrWnllQsgWtBdV2BGBhpWpA95T7I9DWVegY="
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js" integrity="sha256-s5TTOyp+xlSmsDfr/aZhg0Gz+JejYr5iTJI8JxG1SkM="
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha256-DHF4zGyjT7GOMPBwpeehwoey18z8uiz98G4PRu2lV0A="
+    crossorigin="anonymous"></script>
   <script src="js/app.js"></script>
   <!-- Google Analytics. -->
-  <script type="text/javascript">
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-XXXXXXXX-XX']);
-    _gaq.push(['_trackPageview']);
-    (function () {
-      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : '//www') + '.google-analytics.com/ga.js';
-      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })();
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-86268019-3"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'UA-86268019-3');
   </script>
 </body>
 <noscript>Your browser does not support JavaScript!</noscript>

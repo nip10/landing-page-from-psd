@@ -1,0 +1,28 @@
+.features {
+  margin-top: 100px;
+  & .card {
+    box-shadow: none;
+    @include media-breakpoint-down(md) {
+      padding: 10px;
+    }
+    &--header {
+      margin-bottom: 12px;
+    }
+    &--icon {
+      float: left;
+      line-height: 1;
+      margin-bottom: 0;
+      margin-right: 10px;
+      i {
+        font-size: 30px;
+      }
+    }
+    &--description {
+      text-align: left;
+    }
+    &--title {
+      text-align: left;
+      font-size: 22px;
+    }
+  }
+}

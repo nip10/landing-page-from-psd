@@ -1,0 +1,28 @@
+.button {
+  border-radius: 24px;
+  color: $white;
+  display: inline-block;
+  font-weight: 500;
+  height: 50px;
+  line-height: 50px;
+  min-width: 178px;
+  text-align: center;
+  &--secondary {
+    border: 2px solid $purple-200;
+    &:hover {
+      background-color: $pink;
+      border-color: transparent;
+      color: $white;
+      transition-duration: 500ms;
+    }
+  }
+  &--primary {
+    background-color: $pink;
+    border: none;
+    &:hover {
+      background-color: $purple-700;
+      color: $white;
+      transition-duration: 500ms;
+    }
+  }
+}

@@ -24,5 +24,10 @@
   },
   "plugins": [
     "prettier"
-  ]
+  ],
+  "globals": {
+    "WOW": true,
+    "Waypoint": true,
+    "CountUp": true
+  }
 }

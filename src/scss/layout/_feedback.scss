@@ -1,0 +1,101 @@
+.feedback {
+  margin-top: 100px;
+  @include media-breakpoint-down(md) {
+    margin-top: 0;
+  }
+  .slider {
+    margin-top: 50px;
+  }
+  .slick {
+    &-dots {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      margin-top: 25px;
+      li {
+        button {
+          background-color: $white;
+          border: 3px solid $gray-300;
+          border-radius: 50%;
+          height: 12px;
+          margin: 5.5px;
+          outline: none;
+          text-indent: -999999999999999999999999px;
+          width: 12px;
+        }
+        &.slick-active button {
+          background-color: $pink;
+          border-color: $pink;
+        }
+      }
+    }
+    &-slide {
+      img {
+        border: 5px solid $white;
+        border-radius: 50%;
+        box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+        display: block;
+        max-height: 80&;
+        max-width: 80%;
+      }
+      &.slick-current img {
+        max-height: 100%;
+        max-width: 100%;
+      }
+    }
+    &-arrow {
+      background-color: transparent;
+      color: $gray-300;
+      cursor: pointer;
+      display: block;
+      font-size: 24px;
+      height: 100%;
+      left: -25px;
+      position: absolute;
+      text-align: center;
+      top: 25%;
+      width: 30px;
+      &.ion-chevron-right {
+        left: auto;
+        right: -25px;
+      }
+    }
+  }
+  &--client {
+    i {
+      color: $purple-300;
+      font-size: 48px;
+      margin-bottom: 25px;
+    }
+    &--name {
+      color: $purple-800;
+      font-size: 22px;
+      margin-top: 5px;
+      p {
+        color: $gray-400;
+        font-size: 16px;
+      }
+    }
+    &--description {
+      p {
+        color: $gray-600;
+        font-size: 22px;
+        margin: auto;
+        margin-bottom: 25px;
+        max-width: 1010px;
+      }
+    }
+    &--thumbnail {
+      align-items: center;
+      display: flex !important;
+      height: 140px;
+      justify-content: center;
+    }
+  }
+  &--text {
+    .star-icon > i {
+      color: $yellow;
+      font-size: 18px;
+    }
+  }
+}

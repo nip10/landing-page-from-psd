@@ -1,0 +1,25 @@
+.card {
+  border-radius: 10px;
+  box-shadow: 0 1px 1px $gray-500;
+  padding: 35px;
+  text-align: center;
+  &--icon {
+    margin-bottom: 20px;
+    i {
+      color: $pink;
+      font-size: 48px;
+    }
+  }
+  &--title {
+    color: $purple-300;
+  }
+  &--description {
+    color: $gray-600;
+  }
+  &--header {
+    margin-bottom: 10px;
+  }
+  &.highlight {
+    border: 1px solid $pink;
+  }
+}

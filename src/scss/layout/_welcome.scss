@@ -1,0 +1,76 @@
+.welcome {
+  background-image: url('../img/welcome-bg.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  position: relative;
+  @include media-breakpoint-down(md) {
+    height: 900px;
+  }
+  &--header {
+    padding-top: 400px;
+    margin-bottom: 100px;
+    @include media-breakpoint-down(md) {
+      margin-bottom: 0;
+      padding-top: 300px;
+    }
+    h1 {
+      color: $white;
+      font-size: 100px;
+      font-weight: 700;
+      @include media-breakpoint-down(md) {
+        font-size: 48px;
+      }
+    }
+    h2 {
+      bottom: 23px;
+      color: $white;
+      font-size: 350px;
+      font-weight: 700;
+      left: -10px;
+      opacity: .1;
+      position: absolute;
+      z-index: 98;
+      @include media-breakpoint-down(md) {
+        bottom: 80px;
+        font-size: 250px;
+      }
+    }
+    p {
+      color: $white;
+    }
+  }
+  &--thumb {
+    // bottom: 80px;
+    bottom: -40px;
+    position: absolute;
+    right: 70px;
+    width: 45%;
+    z-index: 99;
+    img {
+      height: auto;
+      width: 100%;
+    }
+    @include media-breakpoint-down(md) {
+      bottom: -60px;
+      left: 0;
+      margin: 0 auto;
+      right: 0;
+      width: 90%;
+    }
+  }
+  & form {
+    margin-top: 50px;
+    & input {
+      max-width: 100%;
+      &:first-child {
+        margin-right: 20px;
+        @include media-breakpoint-down(md) {
+          margin-bottom: 20px;
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}

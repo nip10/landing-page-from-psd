@@ -3,9 +3,9 @@
   &--container {
     border: 20px solid $white;
     border-radius: 20px;
-    box-shadow: 0 10px 50px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 10px 50px rgba($black, 0.08);
     height: 0;
-    padding-bottom: 56.25%; /* 16:9 */
+    padding-bottom: 56.25%; // 16:9
     padding-top: 25px;
     position: relative;
     @include media-breakpoint-down(md) {

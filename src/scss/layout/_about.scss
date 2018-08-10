@@ -45,7 +45,8 @@
           display: block;
           min-width: 90vw;
         }
-        &:hover p, &:hover i {
+        &:hover p,
+        &:hover i {
           color: $white;
         }
       }

@@ -28,7 +28,7 @@ const paths = {
   styles: {
     inputSingle: 'src/scss/styles.{scss,sass}',
     inputAll: 'src/scss/**/*.{scss,sass}',
-    vendor: 'src/scss/vendor/**/*',
+    vendor: 'src/scss/vendor/**/*.{scss,sass}',
     output: 'dist/css/',
   },
   images: {
@@ -77,7 +77,10 @@ gulp.task('scripts', () =>
 const sassPipe = lazypipe()
   .pipe(() => gulpif(!isProd, sourcemaps.init()))
   .pipe(sass)
-  .pipe(autoprefixer, { browsers: 'last 4 versions' })
+  .pipe(
+    autoprefixer,
+    { browsers: 'last 4 versions' }
+  )
   .pipe(() => gulpif(isProd, cleanCss()))
   .pipe(() => gulpif(!isProd, sourcemaps.write()));
 
@@ -122,11 +125,17 @@ gulp.task('browser-sync', () => {
   });
 });
 
+const sassLintOptions = {
+  files: {
+    ignore: paths.styles.vendor,
+  },
+};
+
 gulp.task('lint-sass', () =>
   gulp
-    .src([paths.styles.inputAll, !paths.styles.vendor])
+    .src(paths.styles.inputAll)
     .pipe(plumber())
-    .pipe(sassLint())
+    .pipe(sassLint(sassLintOptions))
     .pipe(sassLint.format())
 );
 

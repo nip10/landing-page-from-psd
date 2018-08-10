@@ -1,6 +1,4 @@
 $(() => {
-  console.log('Hello World!');
-
   $('a[href="#"]').click($ => {
     $.preventDefault();
   });

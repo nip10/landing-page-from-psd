@@ -72,7 +72,7 @@ rules:
   no-misspelled-properties:
     - 1
     - extra-properties:
-      - 'overflow-scrolling'
+        - "overflow-scrolling"
   no-qualifying-elements:
     - 1
     - allow-element-with-attribute: true
@@ -121,7 +121,7 @@ rules:
         - dpi
         - dpcm
         - dppx
-        - '%'
+        - "%"
       per-property: {}
   quotes:
     - 0

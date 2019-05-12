@@ -1,17 +1,11 @@
 {
-  "extends": [
-    "airbnb-base",
-    "prettier"
-  ],
+  "extends": ["airbnb-base", "prettier"],
   "env": {
     "browser": true,
     "jquery": true
   },
   "rules": {
-    "linebreak-style": [
-      "error",
-      "windows"
-    ],
+    "linebreak-style": ["error", "windows"],
     "no-console": "off",
     "prettier/prettier": [
       "error",
@@ -22,9 +16,7 @@
       }
     ]
   },
-  "plugins": [
-    "prettier"
-  ],
+  "plugins": ["prettier"],
   "globals": {
     "WOW": true,
     "Waypoint": true,

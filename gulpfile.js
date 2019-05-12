@@ -4,7 +4,7 @@ const gulpif = require('gulp-if');
 const watch = require('gulp-watch');
 const lazypipe = require('lazypipe');
 const plumber = require('gulp-plumber');
-const runSequence = require('run-sequence');
+const runSequence = require('gulp4-run-sequence');
 const browserSync = require('browser-sync');
 const babel = require('gulp-babel');
 const eslint = require('gulp-eslint');
@@ -45,12 +45,14 @@ const paths = {
   },
 };
 
-gulp.task('default', () => {
+gulp.task('default', done => {
   runSequence('clean', ['scripts', 'styles', 'images', 'fonts', 'html']);
+  done();
 });
 
-gulp.task('production', () => {
+gulp.task('production', done => {
   runSequence('lint-sass', 'lint-js', 'default');
+  done();
 });
 
 gulp.task('serve', () => {

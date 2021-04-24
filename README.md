@@ -1,7 +1,7 @@
 # Landing page
 > Practise front-end skills/tools by building a landing page based on a psd template
 
-Live version [here](https://p.dcdev.pt/psd)
+Live version [here](https://psd.diogocardoso.dev)
 
 <p align="center">
 <img src="http://via.placeholder.com/500x300">
